@@ -53,4 +53,4 @@ It allows you to test it also to see what the output will be for users, and give
 
 ## Added features
 
-If going with the same dataset, we should probably think of taking into account the age and the gender of the user to give our recommendation. This could give good results especially when we see that genres are not slim enough factors for a correct reccommendation system.
+If going with the same dataset, we should probably think of taking into account the age and the gender of the user to give our recommendation. This could give good results especially when we see that the genre of a movie is too rough of a factor for a correct reccommendation system by itself.
