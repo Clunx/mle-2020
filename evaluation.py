@@ -12,12 +12,11 @@ users_ids = users['user_id'].tolist()
 #Making sure everything is an integer
 rated_average =[]
 recommended_average=[]
-i = 0
 len_users = len(users_ids)
-while i< len_users-1:
+for i in range(len_users):
     users_ids[i]=int(users_ids[i])
-    i=i+1
 
+users_ids=users_ids[:20]
 
 for user_id in users_ids:
 
@@ -31,12 +30,11 @@ for user_id in users_ids:
             List_of_ratings.append(get_rating_movie_user(ratings,user_id,movie))
 
     #Making sure everything is an integer
-    i=0
     length=len(List_of_ratings)
 
-    while i < length-1:
+    for i in range(length):
         List_of_ratings[i] = int(List_of_ratings[i])
-        i=i+1
+
 
 
     List_of_ratings_total=[]
@@ -45,10 +43,9 @@ for user_id in users_ids:
 
     #Making sure everything is an integer
     length2 = len(List_of_ratings_total)
-    i=0
-    while i< length2 -1:
+    for i in range(length2):
         List_of_ratings_total[i]= int(List_of_ratings_total[i])
-        i=i+1
+
 
 
     if length !=0:
@@ -56,7 +53,7 @@ for user_id in users_ids:
     average_rating_total =sum(List_of_ratings_total)/length2 # The average rating this user gave to all of the movies
     recommended_average.append((average_rating_recommended))
     rated_average.append(average_rating_total)
-    
+
 
 print("recommended average :" + str((sum(recommended_average)/len(recommended_average))))
 print("rated average :" + str((sum(rated_average)/len(rated_average))))
